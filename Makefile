@@ -15,7 +15,7 @@ start:
 	node config/dev-server.js
 
 lint:
-	pre-commit run check-eslint
+	eslint src/ --ext=.jsx --ext=.js
 
 lint-fix:
-	eslint src/ --ext .jsx --ext js --fix
+	eslint src/ --ext=.jsx --ext=.js --fix

@@ -1,27 +1,25 @@
-// constants
-const SET_TERMS = 'SET_TERMS';
+import * as actionTypes from 'src/constants/terms';
 
 const INITIAL_STATE = {
-  termsByDefiniendum: {},
+  termsById: {},
 };
 
 export const STATE_KEY = 'terms';
 
-// reducer
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case SET_TERMS: {
+    case actionTypes.SET_TERMS: {
       const { terms } = action.payload;
-      const newTermsByDefiniendum = terms.reduce((termsMap, term) => {
-        termsMap[term.definiendum] = { ...term };
+      const newTermsById = terms.reduce((termsMap, term) => {
+        termsMap[term.id] = { ...term };
         return termsMap;
       }, {});
 
       return {
         ...state,
-        termsByDefiniendum: {
-          ...state.termsByDefiniendum,
-          ...newTermsByDefiniendum,
+        termsById: {
+          ...state.termsById,
+          ...newTermsById,
         },
       };
     }
@@ -30,9 +28,3 @@ export default (state = INITIAL_STATE, action) => {
     }
   }
 };
-
-// actions
-const setTerms = (terms) => ({
-  type: SET_TERMS,
-  payload: { terms },
-});
