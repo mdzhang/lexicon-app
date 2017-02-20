@@ -1,6 +1,12 @@
 # Lexicon
 
-Lexicon web app
+A simple web-app for adding and lookup up words, such as those particular to a given company's internal lexicon.
+
+Uses
+
+- [React](https://facebook.github.io/react/)
+- [Material UI](http://www.material-ui.com/#/)
+- [Algolia](https://www.algolia.com/)
 
 ## Table of Contents
 
