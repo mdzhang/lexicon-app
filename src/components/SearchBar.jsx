@@ -10,7 +10,7 @@ class SearchBar extends React.Component {
 
   static defaultProps = {
     inputStyle: {
-      color: '#FFF'
+      color: '#FFF',
     },
     onUserInput: _noop,
   };

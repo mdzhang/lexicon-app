@@ -6,6 +6,7 @@ import store from 'src/utils/store';
 import routes from 'src/routes';
 
 import 'src/global.css';
+import 'react-instantsearch-theme-algolia/style.min.css';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
