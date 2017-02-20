@@ -3,7 +3,7 @@ import { Route } from 'react-router';
 
 import AppView from 'src/views/AppView';
 
-export default (store) => {
+export default () => {
   return (
     <Route path="/" component={AppView} />
   );

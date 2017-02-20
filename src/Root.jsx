@@ -1,8 +1,6 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 
-import store from 'src/utils/store';
 import routes from 'src/routes';
 
 import 'src/global.css';
@@ -19,13 +17,11 @@ injectTapEventPlugin();
 export default (props) => {
   return (
     <MuiThemeProvider>
-      <Provider store={store}>
-        <Router
-          history={browserHistory} {...props}
-        >
-          {routes(store)}
-        </Router>
-      </Provider>
+      <Router
+        history={browserHistory} {...props}
+      >
+        {routes}
+      </Router>
     </MuiThemeProvider>
   );
 };
