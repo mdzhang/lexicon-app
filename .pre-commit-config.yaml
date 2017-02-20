@@ -1,0 +1,18 @@
+- repo: local
+  hooks:
+  - id: check-eslint
+    name: check-eslint
+    entry: eslint
+    args: [--ext=.js, --ext=.jsx]
+    language: system
+    files: \.(js|jsx)$
+  - id: check-markdown
+    name: check-markdown
+    entry: markdownlint
+    language: system
+    files: \.(md)$
+  - id: check-shell
+    name: check-shell
+    entry: shellcheck
+    language: system
+    files: \.(sh)$
