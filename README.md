@@ -2,7 +2,9 @@
 
 A simple web-app for adding and looking up words in a lexicon.
 
-![app gif](./.github/img/lexicon.gif)
+<p align="center">
+  <img src="./.github/img/lexicon.gif" />
+</p>
 
 Uses
 
