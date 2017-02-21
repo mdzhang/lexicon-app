@@ -1,38 +1,19 @@
 import React, { PropTypes as T } from 'react';
-import { connect } from 'react-redux';
+import {
+  connectSearchBox,
+} from 'react-instantsearch/connectors';
 import SearchBar from 'src/components/SearchBar';
-import { setSearchText } from 'src/actions/searchText';
 
-class SearchBarContainer extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(value) {
-    this.props.dispatch(setSearchText(value));
-  }
-
-  render() {
-    return (
-      <SearchBar
-        onUserInput={this.handleChange}
-      />
-    );
-  }
-}
-
-SearchBarContainer.propTypes = {
-  dispatch: T.func.isRequired,
+const SearchBarContainer = (props) => {
+  return (
+    <SearchBar
+      onUserInput={(value) => props.refine(value)}
+    />
+  );
 };
 
-function mapStateToProps(state) {
-  return {};
-}
+SearchBarContainer.propTypes = {
+  refine: T.func.isRequired,
+};
 
-function mapDispatchToProps(dispatch) {
-  return { dispatch };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(SearchBarContainer);
+export default connectSearchBox(SearchBarContainer);
