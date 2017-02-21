@@ -77,8 +77,16 @@ const config = {
               localIdentName: '[path][name]___[hash:base64:5]'
             }
           },
-        ]
+        ],
       },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-url-loader',
+          }
+        ],
+      }
     ],
   },
 };

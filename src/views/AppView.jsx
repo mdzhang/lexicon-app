@@ -2,6 +2,7 @@ import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { InstantSearch } from 'react-instantsearch/dom';
 import Header from 'src/components/Header';
+import Footer from 'src/components/Footer';
 import TermPaperListContainer from 'src/containers/TermPaperListContainer';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
@@ -23,6 +24,7 @@ const AppView = (props) => {
       >
         <Header />
         <TermPaperListContainer />
+        <Footer />
       </InstantSearch>
     </MuiThemeProvider>
   );
