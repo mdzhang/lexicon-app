@@ -1,6 +1,6 @@
 # Lexicon
 
-A simple web-app for adding and lookup up words, such as those particular to a given company's internal lexicon.
+A simple web-app for adding and looking up words in a lexicon.
 
 Uses
 
