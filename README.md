@@ -2,6 +2,10 @@
 
 A simple web-app for adding and looking up words in a lexicon.
 
+<p align="center">
+  <img src="./.github/img/lexicon.gif" />
+</p>
+
 Uses
 
 - [React](https://facebook.github.io/react/)
